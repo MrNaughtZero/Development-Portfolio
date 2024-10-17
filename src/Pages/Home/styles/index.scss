@@ -1,0 +1,55 @@
+@import "@styles/global/variables";
+
+.intro {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.skills {
+	margin-top: 40px;
+
+	h2 {
+		font-size: 20px;
+	}
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 5px;
+		list-style-type: none;
+		margin-top: 20px;
+
+		li {
+			animation: fadeIn 0.5s forwards;
+			border: 1px solid $primaryColor;
+			border-radius: 3px;
+			font-size: 14px;
+			opacity: 0;
+			padding: 5px 10px;
+			transform: translateY(10px);
+			transition: $transition;
+
+			@for $i from 1 through 20 {
+				&:nth-child(#{$i}) {
+					animation-delay: 0.05s * ($i - 1);
+				}
+			}
+
+			&:hover {
+				transform: scale(1.05) !important;
+			}
+		}
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

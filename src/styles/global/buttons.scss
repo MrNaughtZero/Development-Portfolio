@@ -1,0 +1,62 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.btn {
+	align-items: center;
+	border: none;
+	border-radius: $radius;
+	display: flex;
+	font-family: $inter;
+	font-size: 14px;
+	font-weight: 600;
+	gap: 5px;
+	justify-content: center;
+	line-height: 22px;
+	padding: 7px 20px;
+
+	span {
+		white-space: nowrap;
+	}
+}
+
+.btn-white {
+	background-color: #fff;
+	border: 1px solid $gray300;
+	color: $black;
+	transition: $transition;
+
+	&:hover {
+		background-color: $gray100;
+	}
+}
+
+.btn-black {
+	background-color: $gray900;
+	border: 1px solid $black;
+	color: $white;
+	transition: $transition;
+
+	&:hover {
+		opacity: 0.9;
+	}
+}
+
+.btn-red {
+	background-color: $red;
+	border: 1px solid $red;
+	color: $white;
+	transition: $transition;
+
+	&:hover {
+		opacity: 0.9;
+	}
+}
+
+.btn-disabled {
+	cursor: not-allowed;
+	opacity: 0.6;
+
+	&:hover {
+		opacity: 0.6;
+	}
+}

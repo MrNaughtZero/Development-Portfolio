@@ -1,0 +1,74 @@
+@import "@styles/global/variables";
+
+.projects {
+	.projects__blocks {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		list-style-type: none;
+
+		li {
+			transition: $transition;
+
+			.title {
+				align-items: center;
+				display: flex;
+				gap: 10px;
+
+				h3 {
+					font-size: 16px;
+					text-decoration: underline;
+				}
+			}
+
+			p {
+				color: #6b7280;
+				font-weight: 500;
+				margin-top: 10px;
+			}
+
+			.link {
+				svg {
+					opacity: 0.8;
+
+					&:hover {
+						opacity: 1;
+					}
+				}
+			}
+
+			&:hover {
+				transform: translateX(5px);
+			}
+		}
+
+		ul {
+			display: flex;
+			gap: 10px;
+			list-style-type: none;
+			margin-bottom: 20px;
+			margin-top: 10px;
+
+			li {
+				animation: fadeIn 0.5s forwards;
+				border: 1px solid $primaryColor;
+				border-radius: 3px;
+				font-size: 14px;
+				opacity: 0;
+				padding: 5px 10px;
+				transform: translateY(10px);
+				transition: $transition;
+
+				@for $i from 1 through 20 {
+					&:nth-child(#{$i}) {
+						animation-delay: 0.05s * ($i - 1);
+					}
+				}
+
+				&:hover {
+					transform: scale(1.05) !important;
+				}
+			}
+		}
+	}
+}

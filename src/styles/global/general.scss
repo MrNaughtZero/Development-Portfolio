@@ -1,0 +1,52 @@
+@import "./variables.scss";
+
+body {
+	background-color: #f5f7f8;
+	font-family: $inter;
+	height: 100%;
+	max-width: 100vw;
+	min-width: 100vw;
+	overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $inter;
+	font-weight: 600;
+}
+
+span,
+p,
+input {
+	color: $black;
+	font-family: $inter;
+}
+
+a {
+	color: $secondaryColor;
+	font-family: $inter;
+	font-weight: 600;
+}
+
+a,
+button {
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+}
+
+.disabled {
+	pointer-events: none !important;
+}
+
+*::-webkit-scrollbar {
+	background-color: $gray400;
+	height: 4px;
+	width: 7px;
+}

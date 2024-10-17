@@ -1,0 +1,7 @@
+// load Inter.tff font from ../assets/fonts/Inter.tff. It is a variable font, so setup the font weights from 300 - 900. Remember, its a .ttf file and its a variable font.
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 300 400 500 600 700 800 900;
+  src: url("../assets/fonts/Inter.tff") format("truetype");
+}

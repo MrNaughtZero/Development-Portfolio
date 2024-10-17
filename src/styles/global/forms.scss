@@ -1,0 +1,36 @@
+.form-group {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	position: relative;
+}
+
+* .form-group {
+	&:not(:last-child) {
+		margin-bottom: 20px;
+	}
+}
+
+.form-group-inline {
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+	gap: 10px;
+}
+
+.form-grow {
+	* {
+		flex-grow: 1;
+	}
+}
+
+.form-group-no-gap {
+	gap: 0;
+}
+
+.form-group-small-gap {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	margin-bottom: 15px;
+}
