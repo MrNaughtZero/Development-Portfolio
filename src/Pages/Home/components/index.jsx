@@ -15,7 +15,7 @@ export default function HomePage() {
 				<p>
 					Outside of work, I usually spend my time playing video games, watching TV or
 					spending time with my family. I'm also a big fan of football and support
-					Liverpool!.
+					Liverpool!
 				</p>
 			</div>
 
